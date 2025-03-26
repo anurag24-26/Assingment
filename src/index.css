@@ -208,6 +208,9 @@ button:hover {
     flex-wrap: row; /* Spacing */
     background-color: transparent;
   }
+  button:hover {
+    background: transparent;
+  }
 
   .task-list li {
     flex-direction: column;
