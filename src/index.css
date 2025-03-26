@@ -1,20 +1,14 @@
-/* General Styles */
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(
-    135deg,
-    #2c3e50,
-    #0e1e20
-  ); /* Cool gradient for a fresh look */
+  background: linear-gradient(135deg, #2c3e50, #0e1e20);
   color: #f5f5f5;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-/* Navigation */
 nav {
-  background: rgba(0, 0, 0, 0.6); /* Subtle transparency for a sleek effect */
+  background: rgba(0, 0, 0, 0.6);
   padding: 16px;
   display: flex;
   justify-content: center;
@@ -24,7 +18,7 @@ nav {
 }
 
 nav a {
-  color: #ffcc00; /* Vibrant gold */
+  color: #ffcc00;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
@@ -34,35 +28,32 @@ nav a {
 }
 
 nav a:hover {
-  background: #333; /* Dark hover */
+  background: #333;
 }
 
-/* Container */
 .container {
   width: 90%;
   max-width: 480px;
   margin: 40px auto;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent for a card effect */
+  background: rgba(255, 255, 255, 0.1);
   padding: 24px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Subtle elevation */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Heading */
 h1 {
   font-size: 28px;
-  color: #ffcc00; /* Vibrant gold */
+  color: #ffcc00;
   margin-bottom: 20px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Input Group */
 .input-group {
   display: flex;
-  flex-wrap: wrap; /* Adapts for smaller screens */
+  flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
-  align-items: center; /* Align items vertically */
+  align-items: center;
 }
 
 input[type="text"] {
@@ -80,10 +71,9 @@ input[type="text"] {
 
 input[type="text"]:focus {
   border-color: #ffcc00;
-  box-shadow: 0 0 8px rgba(255, 204, 0, 0.6); /* Glow effect */
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
 }
 
-/* Select Dropdown */
 select {
   padding: 12px;
   font-size: 16px;
@@ -94,12 +84,11 @@ select {
   cursor: pointer;
 }
 
-/* Add Task Button */
 button {
-  background: #4caf50; /* Fresh green */
+  background: #0000001e;
   color: white;
   border: none;
-  padding: 12px 16px;
+  padding: 12px 14px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 6px;
@@ -107,11 +96,10 @@ button {
 }
 
 button:hover {
-  background: #388e3c; /* Darker green */
+  background: #000000;
   transform: scale(1.05);
 }
 
-/* Task List */
 .task-list {
   list-style: none;
   padding: 0;
@@ -123,28 +111,26 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1); /* Transparent card effect */
+  background: rgba(255, 255, 255, 0.1);
   padding: 15px;
   margin: 10px 0;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Card shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s ease-in-out;
 }
 
 .task-list li:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-  background: rgba(255, 255, 255, 0.2); /* Brighter card */
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
 }
 
-/* Task Number */
 .task-number {
   font-size: 18px;
   font-weight: bold;
-  color: #4ca1af; /* Aqua highlight */
+  color: #4ca1af;
   margin-right: 10px;
 }
 
-/* Task Text */
 .task-text {
   flex: 1;
   font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
@@ -153,20 +139,18 @@ button:hover {
   font-weight: 600;
 }
 
-/* Priority Badge */
 .priority-high {
-  border-left: 6px solid #e53935; /* Bright red */
+  border-left: 6px solid #e53935;
 }
 
 .priority-medium {
-  border-left: 6px solid #ffcc00; /* Gold */
+  border-left: 6px solid #ffcc00;
 }
 
 .priority-low {
-  border-left: 6px solid #4caf50; /* Green */
+  border-left: 6px solid #4caf50;
 }
 
-/* Delete Button */
 .delete-btn {
   background: #333;
   color: white;
@@ -177,11 +161,10 @@ button:hover {
 }
 
 .delete-btn:hover {
-  background: #e53935; /* Bright red on hover */
+  background: #e53935;
   transform: scale(1.05);
 }
 
-/* Responsive Design */
 @media (max-width: 480px) {
   .container {
     padding: 20px;
@@ -192,19 +175,19 @@ button:hover {
   }
 
   .input-group {
-    flex-direction: row; /* Horizontal layout */
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
   }
 
   input[type="text"],
   select {
-    width: calc(60% - 10px); /* Prioritize the width */
-    margin-bottom: 10px; /* Ensure spacing */
+    width: calc(60% - 10px);
+    margin-bottom: 10px;
   }
 
   button {
-    width: calc(35%); /* Aligned with input and select */
+    width: calc(35%);
   }
 
   .task-list li {
