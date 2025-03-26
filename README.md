@@ -1,12 +1,42 @@
-# React + Vite
+# Advanced React To-Do Application 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an **Advanced React To-Do App** featuring:
 
-Currently, two official plugins are available:
+- **Redux State Management**
+- **API Integration**
+- **Authentication (Fake Login)**
+- **Responsive Design**
+- **Modern UI with Styled Components**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📸 Screenshots
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### **Login Page**
+
+![Login Page](./screenshots/login.png)
+
+### **To-Do Dashboard**
+
+![Dashboard](./screenshots/dashboard.png)
+
+---
+
+## 🚀 Features
+
+✅ **User Authentication** (Fake Login)  
+✅ **Add, Update, Delete, and Complete To-Dos**  
+✅ **Persist State with Redux**  
+✅ **Dark Mode Support**  
+✅ **Mobile-Friendly UI**
+
+---
+
+## 🔧 Installation & Setup
+
+1️⃣ **Clone the repository**
+
+```sh
+git clone https://github.com/yourusername/react-todo-app.git
+cd react-todo-app
+```
