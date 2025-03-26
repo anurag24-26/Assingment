@@ -1,14 +1,20 @@
+/* General Styles */
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #2c3e50, #0e1e20);
+  background: linear-gradient(
+    135deg,
+    #2c3e50,
+    #0e1e20
+  ); /* Cool gradient for a fresh look */
   color: #f5f5f5;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
+/* Navigation */
 nav {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6); /* Subtle transparency for a sleek effect */
   padding: 16px;
   display: flex;
   justify-content: center;
@@ -18,7 +24,7 @@ nav {
 }
 
 nav a {
-  color: #ffcc00;
+  color: #ffcc00; /* Vibrant gold */
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
@@ -28,32 +34,35 @@ nav a {
 }
 
 nav a:hover {
-  background: #333;
+  background: #333; /* Dark hover */
 }
 
+/* Container */
 .container {
   width: 90%;
   max-width: 480px;
   margin: 40px auto;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent for a card effect */
   padding: 24px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Subtle elevation */
 }
 
+/* Heading */
 h1 {
   font-size: 28px;
-  color: #ffcc00;
+  color: #ffcc00; /* Vibrant gold */
   margin-bottom: 20px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
+/* Input Group */
 .input-group {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Adapts for smaller screens */
   gap: 12px;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Align items vertically */
 }
 
 input[type="text"] {
@@ -71,9 +80,10 @@ input[type="text"] {
 
 input[type="text"]:focus {
   border-color: #ffcc00;
-  box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.6); /* Glow effect */
 }
 
+/* Select Dropdown */
 select {
   padding: 12px;
   font-size: 16px;
@@ -84,8 +94,9 @@ select {
   cursor: pointer;
 }
 
+/* Add Task Button */
 button {
-  background: #0000001e;
+  background: #0000001e; /* Fresh green */
   color: white;
   border: none;
   padding: 12px 14px;
@@ -96,10 +107,11 @@ button {
 }
 
 button:hover {
-  background: #000000;
+  background: #000000; /* Darker green */
   transform: scale(1.05);
 }
 
+/* Task List */
 .task-list {
   list-style: none;
   padding: 0;
@@ -111,26 +123,28 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1); /* Transparent card effect */
   padding: 15px;
   margin: 10px 0;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Card shadow */
   transition: transform 0.2s ease-in-out;
 }
 
 .task-list li:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px); /* Slight lift on hover */
+  background: rgba(255, 255, 255, 0.2); /* Brighter card */
 }
 
+/* Task Number */
 .task-number {
   font-size: 18px;
   font-weight: bold;
-  color: #4ca1af;
+  color: #4ca1af; /* Aqua highlight */
   margin-right: 10px;
 }
 
+/* Task Text */
 .task-text {
   flex: 1;
   font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
@@ -139,18 +153,20 @@ button:hover {
   font-weight: 600;
 }
 
+/* Priority Badge */
 .priority-high {
-  border-left: 6px solid #e53935;
+  border-left: 6px solid #e53935; /* Bright red */
 }
 
 .priority-medium {
-  border-left: 6px solid #ffcc00;
+  border-left: 6px solid #ffcc00; /* Gold */
 }
 
 .priority-low {
-  border-left: 6px solid #4caf50;
+  border-left: 6px solid #4caf50; /* Green */
 }
 
+/* Delete Button */
 .delete-btn {
   background: #333;
   color: white;
@@ -161,10 +177,11 @@ button:hover {
 }
 
 .delete-btn:hover {
-  background: #e53935;
+  background: #e53935; /* Bright red on hover */
   transform: scale(1.05);
 }
 
+/* Responsive Design */
 @media (max-width: 480px) {
   .container {
     padding: 20px;
@@ -175,19 +192,21 @@ button:hover {
   }
 
   .input-group {
-    flex-direction: row;
+    flex-direction: row; /* Horizontal layout */
     flex-wrap: wrap;
     gap: 10px;
   }
 
   input[type="text"],
   select {
-    width: calc(60% - 10px);
-    margin-bottom: 10px;
+    width: calc(60% - 10px); /* Prioritize the width */
+    margin-bottom: 10px; /* Ensure spacing */
   }
 
   button {
-    width: calc(35%);
+    width: calc(5%); /* Aligned with input and select */
+    flex-wrap: row; /* Spacing */
+    background-color: transparent;
   }
 
   .task-list li {
