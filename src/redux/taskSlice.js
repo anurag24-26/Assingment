@@ -1,32 +1,41 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const loadFromLocalStorage = () => {
-  const savedTasks = localStorage.getItem("tasks");
-  return savedTasks ? JSON.parse(savedTasks) : [];
-};
-
-const saveToLocalStorage = (tasks) => {
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+const initialState = {
+  list: JSON.parse(localStorage.getItem("tasks")) || [],
 };
 
 const taskSlice = createSlice({
   name: "tasks",
-  initialState: { list: loadFromLocalStorage() },
+  initialState,
   reducers: {
+    loadTasks: (state) => {
+      state.list = JSON.parse(localStorage.getItem("tasks")) || [];
+    },
     addTask: (state, action) => {
-      const newTask = { id: Date.now(), ...action.payload };
+      const newTask = { id: Date.now(), ...action.payload, completed: false };
       state.list.push(newTask);
-      saveToLocalStorage(state.list);
+      localStorage.setItem("tasks", JSON.stringify(state.list));
     },
     removeTask: (state, action) => {
       state.list = state.list.filter((task) => task.id !== action.payload);
-      saveToLocalStorage(state.list);
+      localStorage.setItem("tasks", JSON.stringify(state.list));
     },
-    loadTasks: (state) => {
-      state.list = loadFromLocalStorage();
+    updateTask: (state, action) => {
+      const task = state.list.find((t) => t.id === action.payload.id);
+      if (task) {
+        task.text = action.payload.text;
+        task.priority = action.payload.priority;
+      }
+      localStorage.setItem("tasks", JSON.stringify(state.list));
+    },
+    toggleComplete: (state, action) => {
+      const task = state.list.find((t) => t.id === action.payload);
+      if (task) task.completed = !task.completed;
+      localStorage.setItem("tasks", JSON.stringify(state.list));
     },
   },
 });
 
-export const { addTask, removeTask, loadTasks } = taskSlice.actions;
+export const { loadTasks, addTask, removeTask, updateTask, toggleComplete } =
+  taskSlice.actions;
 export default taskSlice.reducer;
